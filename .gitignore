@@ -1,0 +1,53 @@
+# Secrets — NEVER commit
+config.py
+.env
+.env.local
+.env.*.local
+
+# Data — regeneratable, large, or contains user library state
+data/audio/
+data/*.db
+data/*.db.*
+data/*.log
+data/*.log.err
+data/recompute_progress.json
+# YouTube session cookies — treat as secrets
+data/yt_cookies*.txt
+data/yt_*.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code state (contains embedded git worktrees and session cache)
+.claude/
+
+# ML pipeline artifacts
+ml/data/previews/
+ml/data/*.log
+ml/data/*.mp3
+ml/data/verify_preview.mp3
+ml/data/mel_cache/
+ml/data/spotify_tracks.csv
+ml/data/manifest.csv
+ml/data/*.csv.tmp
+ml/data/*.compact.tmp
+ml/models/*.ckpt
+ml/models/*.pt
+ml/experiments/
